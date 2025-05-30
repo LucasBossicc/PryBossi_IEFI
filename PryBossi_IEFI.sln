@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PryBossi_IEFI", "PryBossi_IEFI.csproj", "{ACDC677F-0A30-4B1C-887A-8EB27C4498D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACDC677F-0A30-4B1C-887A-8EB27C4498D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACDC677F-0A30-4B1C-887A-8EB27C4498D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACDC677F-0A30-4B1C-887A-8EB27C4498D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACDC677F-0A30-4B1C-887A-8EB27C4498D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22303371-E04A-4DEF-88AB-8B8BFF063D5B}
+	EndGlobalSection
+EndGlobal
