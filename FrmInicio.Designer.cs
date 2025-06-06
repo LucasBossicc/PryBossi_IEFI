@@ -31,11 +31,12 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.gbInicio = new System.Windows.Forms.GroupBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblContraseña = new System.Windows.Forms.Label();
-            this.lblCuentaNueva = new System.Windows.Forms.Label();
+            this.lblOlvido = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.lblCuentaNueva = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.gbInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +44,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(96, 168);
+            this.txtUsuario.Location = new System.Drawing.Point(103, 164);
             this.txtUsuario.MaxLength = 30;
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
@@ -53,7 +54,7 @@
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(96, 266);
+            this.txtContraseña.Location = new System.Drawing.Point(103, 248);
             this.txtContraseña.MaxLength = 30;
             this.txtContraseña.Multiline = true;
             this.txtContraseña.Name = "txtContraseña";
@@ -63,6 +64,7 @@
             // gbInicio
             // 
             this.gbInicio.BackColor = System.Drawing.SystemColors.MenuText;
+            this.gbInicio.Controls.Add(this.lblOlvido);
             this.gbInicio.Controls.Add(this.btnIngresar);
             this.gbInicio.Controls.Add(this.pbLogo);
             this.gbInicio.Controls.Add(this.lblCuentaNueva);
@@ -72,52 +74,28 @@
             this.gbInicio.Controls.Add(this.txtUsuario);
             this.gbInicio.Location = new System.Drawing.Point(191, 35);
             this.gbInicio.Name = "gbInicio";
-            this.gbInicio.Size = new System.Drawing.Size(481, 441);
+            this.gbInicio.Size = new System.Drawing.Size(484, 450);
             this.gbInicio.TabIndex = 0;
             this.gbInicio.TabStop = false;
             // 
-            // lblUsuario
+            // lblOlvido
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUsuario.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUsuario.Location = new System.Drawing.Point(110, 136);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(277, 29);
-            this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "INGRESE SU NOMBRE DE USUARIO";
-            // 
-            // lblContraseña
-            // 
-            this.lblContraseña.AutoSize = true;
-            this.lblContraseña.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblContraseña.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblContraseña.Location = new System.Drawing.Point(148, 234);
-            this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(215, 29);
-            this.lblContraseña.TabIndex = 1;
-            this.lblContraseña.Text = "INGRESE SU CONTRASEÑA";
-            // 
-            // lblCuentaNueva
-            // 
-            this.lblCuentaNueva.AutoSize = true;
-            this.lblCuentaNueva.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCuentaNueva.Font = new System.Drawing.Font("Myanmar Text", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuentaNueva.ForeColor = System.Drawing.Color.Aqua;
-            this.lblCuentaNueva.Location = new System.Drawing.Point(149, 322);
-            this.lblCuentaNueva.Name = "lblCuentaNueva";
-            this.lblCuentaNueva.Size = new System.Drawing.Size(188, 21);
-            this.lblCuentaNueva.TabIndex = 1;
-            this.lblCuentaNueva.Text = "¿no tienes cuenta? Registrate ya";
-            this.lblCuentaNueva.Click += new System.EventHandler(this.lblCuentaNueva_Click);
+            this.lblOlvido.AutoSize = true;
+            this.lblOlvido.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblOlvido.Font = new System.Drawing.Font("Myanmar Text", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOlvido.ForeColor = System.Drawing.Color.Aqua;
+            this.lblOlvido.Location = new System.Drawing.Point(163, 316);
+            this.lblOlvido.Name = "lblOlvido";
+            this.lblOlvido.Size = new System.Drawing.Size(146, 21);
+            this.lblOlvido.TabIndex = 3;
+            this.lblOlvido.Text = "¿olvidaste la contraseña?";
+            this.lblOlvido.Click += new System.EventHandler(this.lblOlvido_Click);
             // 
             // btnIngresar
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.LightGreen;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(174, 356);
+            this.btnIngresar.Location = new System.Drawing.Point(174, 358);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(141, 38);
             this.btnIngresar.TabIndex = 2;
@@ -135,6 +113,43 @@
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogo.TabIndex = 1;
             this.pbLogo.TabStop = false;
+            // 
+            // lblCuentaNueva
+            // 
+            this.lblCuentaNueva.AutoSize = true;
+            this.lblCuentaNueva.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCuentaNueva.Font = new System.Drawing.Font("Myanmar Text", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuentaNueva.ForeColor = System.Drawing.Color.Aqua;
+            this.lblCuentaNueva.Location = new System.Drawing.Point(6, 426);
+            this.lblCuentaNueva.Name = "lblCuentaNueva";
+            this.lblCuentaNueva.Size = new System.Drawing.Size(188, 21);
+            this.lblCuentaNueva.TabIndex = 1;
+            this.lblCuentaNueva.Text = "¿no tienes cuenta? Registrate ya";
+            this.lblCuentaNueva.Click += new System.EventHandler(this.lblCuentaNueva_Click);
+            // 
+            // lblContraseña
+            // 
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblContraseña.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblContraseña.Location = new System.Drawing.Point(145, 216);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(215, 29);
+            this.lblContraseña.TabIndex = 1;
+            this.lblContraseña.Text = "INGRESE SU CONTRASEÑA";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUsuario.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblUsuario.Location = new System.Drawing.Point(112, 132);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(277, 29);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.Text = "INGRESE SU NOMBRE DE USUARIO";
             // 
             // FrmInicio
             // 
@@ -164,6 +179,7 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Label lblOlvido;
     }
 }
 

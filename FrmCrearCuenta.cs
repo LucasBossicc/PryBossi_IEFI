@@ -20,7 +20,30 @@ namespace PryBossi_IEFI
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
-            
+            string nombre = txtUsuarioNuevo.Text.Trim();
+            string contraseña = txtContraseñaNueva.Text.Trim();
+            string categoria = cmbCategorias.SelectedItem?.ToString();
+
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(contraseña)  || string.IsNullOrWhiteSpace(categoria))
+{
+                
+                MessageBox.Show("Todos los campos son obligatorios.");
+                return;
+            }
+
+            bool exito = clsCuenta.RegistrarUsuario(nombre, contraseña, categoria);
+
+            if (exito)
+            {
+                MessageBox.Show("Cuenta creada exitosamente.");
+                FrmInicio login = new FrmInicio();
+                login.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("No se pudo crear la cuenta.");
+            }
         }
     }
 }

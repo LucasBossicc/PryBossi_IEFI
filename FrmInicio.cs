@@ -37,20 +37,20 @@ namespace PryBossi_IEFI
 
             
         }
-        private string CadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Inicio.mdb";
+        
         private bool ValidarLogin(string usuario, string contraseña)
         {
 
-            using (OleDbConnection conexion = new OleDbConnection(CadenaConexion))
-            //Crea una conexión nueva y la usa dentro de un bloque using, lo que asegura que se cierre automáticamente al salir del bloque.
+
+            using (OleDbConnection conexion = clsBaseDatos.Conexion())
             {
                 if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(contraseña))
                 {
                     MessageBox.Show("Ingresá usuario y contraseña.");
                     return false;
                 }
-                conexion.Open();
-                string consulta = "SELECT COUNT(*) FROM Inicio WHERE nombre = ? AND contraseña = ?";
+                
+                string consulta = "SELECT COUNT(*) FROM NewCuenta WHERE nombre = ? AND contraseña = ?";
                 using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
                 {
                     comando.Parameters.AddWithValue("?", usuario);
@@ -62,37 +62,17 @@ namespace PryBossi_IEFI
             }
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-
-            string usuario = txtUsuario.Text.Trim();
-            string contraseña = txtContraseña.Text;
-
-            if (ValidarLogin(usuario, contraseña))
-            {
-                MessageBox.Show("Inicio de sesión exitoso.");
-                FrmPrincipal form = new FrmPrincipal(usuario);
-                form.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos.");
-            }
-
-        }
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             string usuario = txtUsuario.Text.Trim();
             string contraseña = txtContraseña.Text;
-
             if (ValidarLogin(usuario, contraseña))
             {
                 MessageBox.Show("Inicio de sesión exitoso.");
-                FrmPrincipal form = new FrmPrincipal(usuario);
-                form.Show();
+                FrmPrincipal a = new FrmPrincipal(txtUsuario.Text);
+                a.Show();
                 this.Hide();
+
             }
             else
             {
@@ -103,7 +83,15 @@ namespace PryBossi_IEFI
         private void lblCuentaNueva_Click(object sender, EventArgs e)
         {
             FrmCrearCuenta a = new FrmCrearCuenta();    
-            a.ShowDialog();
+            a.Show();
+            this.Hide();
+        }
+
+        private void lblOlvido_Click(object sender, EventArgs e)
+        {
+            frmModificarContraseña a = new frmModificarContraseña();
+            a.Show();
+            this.Hide();
         }
     }
 }

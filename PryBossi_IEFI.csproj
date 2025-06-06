@@ -52,17 +52,43 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsBaseDatos.cs" />
+    <Compile Include="clsCuenta.cs" />
+    <Compile Include="clsUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clsUsuario.Designer.cs">
+      <DependentUpon>clsUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuditoria.Designer.cs">
+      <DependentUpon>frmAuditoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCrearCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCrearCuenta.Designer.cs">
       <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminar.Designer.cs">
+      <DependentUpon>frmEliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmInicio.Designer.cs">
       <DependentUpon>FrmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarContraseña.Designer.cs">
+      <DependentUpon>frmModificarContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -72,11 +98,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAuditoria.resx">
+      <DependentUpon>frmAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCrearCuenta.resx">
       <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminar.resx">
+      <DependentUpon>frmEliminar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarContraseña.resx">
+      <DependentUpon>frmModificarContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
