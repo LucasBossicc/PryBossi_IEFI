@@ -66,6 +66,8 @@ namespace PryBossi_IEFI
         {
             string usuario = txtUsuario.Text.Trim();
             string contraseña = txtContraseña.Text;
+            clsRegistro.UsuarioActual = usuario;
+            clsRegistro.HoraInicio = DateTime.Now;
             if (ValidarLogin(usuario, contraseña))
             {
                 MessageBox.Show("Inicio de sesión exitoso.");

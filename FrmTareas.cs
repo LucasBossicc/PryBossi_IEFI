@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PryBossi_IEFI
 {
-    public partial class clsUsuario : Form
+    public partial class FrmTareas : Form
     {
-        public clsUsuario()
+        public FrmTareas()
         {
             InitializeComponent();
         }

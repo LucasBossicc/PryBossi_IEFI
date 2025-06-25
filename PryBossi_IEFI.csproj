@@ -54,12 +54,7 @@
   <ItemGroup>
     <Compile Include="clsBaseDatos.cs" />
     <Compile Include="clsCuenta.cs" />
-    <Compile Include="clsUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="clsUsuario.Designer.cs">
-      <DependentUpon>clsUsuario.cs</DependentUpon>
-    </Compile>
+    <Compile Include="clsRegistro.cs" />
     <Compile Include="frmAuditoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +91,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTareas.Designer.cs">
+      <DependentUpon>FrmTareas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAuditoria.resx">
@@ -115,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTareas.resx">
+      <DependentUpon>FrmTareas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
