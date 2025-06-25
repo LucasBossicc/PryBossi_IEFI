@@ -28,17 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.gbInicio = new System.Windows.Forms.GroupBox();
             this.lblOlvido = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblCuentaNueva = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbInicio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -72,7 +77,7 @@
             this.gbInicio.Controls.Add(this.lblUsuario);
             this.gbInicio.Controls.Add(this.txtContraseña);
             this.gbInicio.Controls.Add(this.txtUsuario);
-            this.gbInicio.Location = new System.Drawing.Point(191, 35);
+            this.gbInicio.Location = new System.Drawing.Point(243, 82);
             this.gbInicio.Name = "gbInicio";
             this.gbInicio.Size = new System.Drawing.Size(484, 450);
             this.gbInicio.TabIndex = 0;
@@ -103,17 +108,6 @@
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // pbLogo
-            // 
-            this.pbLogo.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pbLogo.Image = global::PryBossi_IEFI.Properties.Resources._44562;
-            this.pbLogo.Location = new System.Drawing.Point(204, 19);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(82, 95);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogo.TabIndex = 1;
-            this.pbLogo.TabStop = false;
-            // 
             // lblCuentaNueva
             // 
             this.lblCuentaNueva.AutoSize = true;
@@ -124,7 +118,7 @@
             this.lblCuentaNueva.Name = "lblCuentaNueva";
             this.lblCuentaNueva.Size = new System.Drawing.Size(188, 21);
             this.lblCuentaNueva.TabIndex = 1;
-            this.lblCuentaNueva.Text = "¿no tienes cuenta? Registrate ya";
+            this.lblCuentaNueva.Text = "¿no tienes cuenta? Regístrate ya";
             this.lblCuentaNueva.Click += new System.EventHandler(this.lblCuentaNueva_Click);
             // 
             // lblContraseña
@@ -151,21 +145,57 @@
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "INGRESE SU NOMBRE DE USUARIO";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
+            this.pictureBox1.Location = new System.Drawing.Point(-335, 45);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(235, 161);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbLogo.Image = global::PryBossi_IEFI.Properties.Resources._44562;
+            this.pbLogo.Location = new System.Drawing.Point(204, 19);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(82, 95);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 1;
+            this.pbLogo.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
+            this.pictureBox2.Location = new System.Drawing.Point(-96, -60);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1148, 778);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(830, 561);
+            this.ClientSize = new System.Drawing.Size(957, 659);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbInicio);
+            this.Controls.Add(this.pictureBox2);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "INICIO DE SESION";
             this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.gbInicio.ResumeLayout(false);
             this.gbInicio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,6 +210,8 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Label lblOlvido;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

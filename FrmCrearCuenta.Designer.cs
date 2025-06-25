@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCrearCuenta));
             this.gbInicio = new System.Windows.Forms.GroupBox();
             this.cmbCategorias = new System.Windows.Forms.ComboBox();
             this.btnCrearUsuario = new System.Windows.Forms.Button();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtContraseñaNueva = new System.Windows.Forms.TextBox();
             this.txtUsuarioNuevo = new System.Windows.Forms.TextBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbInicio
@@ -52,7 +55,7 @@
             this.gbInicio.Controls.Add(this.lblUsuario);
             this.gbInicio.Controls.Add(this.txtContraseñaNueva);
             this.gbInicio.Controls.Add(this.txtUsuarioNuevo);
-            this.gbInicio.Location = new System.Drawing.Point(191, 35);
+            this.gbInicio.Location = new System.Drawing.Point(243, 82);
             this.gbInicio.Name = "gbInicio";
             this.gbInicio.Size = new System.Drawing.Size(484, 450);
             this.gbInicio.TabIndex = 1;
@@ -82,17 +85,6 @@
             this.btnCrearUsuario.UseVisualStyleBackColor = false;
             this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUsuario_Click);
             // 
-            // pbLogo
-            // 
-            this.pbLogo.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pbLogo.Image = global::PryBossi_IEFI.Properties.Resources._44562;
-            this.pbLogo.Location = new System.Drawing.Point(204, 19);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(82, 95);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogo.TabIndex = 1;
-            this.pbLogo.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -103,7 +95,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "CATEGORIA\r\n";
+            this.label1.Text = "CATEGORÍA\r\n";
             // 
             // lblContraseña
             // 
@@ -149,19 +141,43 @@
             this.txtUsuarioNuevo.Size = new System.Drawing.Size(303, 38);
             this.txtUsuarioNuevo.TabIndex = 0;
             // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbLogo.Image = global::PryBossi_IEFI.Properties.Resources._44562;
+            this.pbLogo.Location = new System.Drawing.Point(204, 19);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(82, 95);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 1;
+            this.pbLogo.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
+            this.pictureBox1.Location = new System.Drawing.Point(-96, -60);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1148, 778);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmCrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(830, 561);
+            this.ClientSize = new System.Drawing.Size(957, 659);
             this.Controls.Add(this.gbInicio);
+            this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCrearCuenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear Cuenta";
             this.gbInicio.ResumeLayout(false);
             this.gbInicio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,5 +193,6 @@
         private System.Windows.Forms.TextBox txtUsuarioNuevo;
         private System.Windows.Forms.ComboBox cmbCategorias;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

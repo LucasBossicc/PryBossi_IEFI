@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.tssUsuario = new System.Windows.Forms.StatusStrip();
             this.tsslblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssUno = new System.Windows.Forms.ToolStripStatusLabel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ms1 = new System.Windows.Forms.MenuStrip();
             this.tAREASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aDMINISTRACIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uSUARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,46 +42,51 @@
             this.eLIMINARUSUARIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblTiempo = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tssUsuario.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.ms1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tssUsuario
             // 
-            this.tssUsuario.BackColor = System.Drawing.Color.LightGreen;
+            this.tssUsuario.BackColor = System.Drawing.Color.Black;
             this.tssUsuario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslblUsuario,
             this.tssUno});
-            this.tssUsuario.Location = new System.Drawing.Point(0, 469);
+            this.tssUsuario.Location = new System.Drawing.Point(0, 629);
             this.tssUsuario.Name = "tssUsuario";
-            this.tssUsuario.Size = new System.Drawing.Size(830, 30);
+            this.tssUsuario.Size = new System.Drawing.Size(957, 30);
             this.tssUsuario.TabIndex = 6;
             this.tssUsuario.Text = "statusStrip1";
             // 
             // tsslblUsuario
             // 
+            this.tsslblUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tsslblUsuario.Name = "tsslblUsuario";
             this.tsslblUsuario.Size = new System.Drawing.Size(12, 25);
             this.tsslblUsuario.Text = "-";
+            this.tsslblUsuario.Click += new System.EventHandler(this.tsslblUsuario_Click);
             // 
             // tssUno
             // 
             this.tssUno.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tssUno.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tssUno.Name = "tssUno";
             this.tssUno.Size = new System.Drawing.Size(20, 25);
             this.tssUno.Text = "-";
             // 
-            // menuStrip1
+            // ms1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ms1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ms1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tAREASToolStripMenuItem,
             this.aDMINISTRACIONToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(830, 24);
-            this.menuStrip1.TabIndex = 7;
-            this.menuStrip1.Text = "menuStrip1";
+            this.ms1.Location = new System.Drawing.Point(0, 0);
+            this.ms1.Name = "ms1";
+            this.ms1.Size = new System.Drawing.Size(957, 24);
+            this.ms1.TabIndex = 7;
+            this.ms1.Text = "menuStrip1";
             // 
             // tAREASToolStripMenuItem
             // 
@@ -98,7 +104,7 @@
             this.eLIMINARUSUARIOToolStripMenuItem});
             this.aDMINISTRACIONToolStripMenuItem.Name = "aDMINISTRACIONToolStripMenuItem";
             this.aDMINISTRACIONToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
-            this.aDMINISTRACIONToolStripMenuItem.Text = "ADMINISTRACION";
+            this.aDMINISTRACIONToolStripMenuItem.Text = "ADMINISTRACIÓN";
             // 
             // uSUARIOSToolStripMenuItem
             // 
@@ -133,8 +139,10 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
+            this.lblFecha.BackColor = System.Drawing.Color.Black;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(665, 472);
+            this.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblFecha.Location = new System.Drawing.Point(780, 641);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(14, 18);
             this.lblFecha.TabIndex = 8;
@@ -143,24 +151,38 @@
             // lblTiempo
             // 
             this.lblTiempo.AutoSize = true;
-            this.lblTiempo.Location = new System.Drawing.Point(366, 427);
+            this.lblTiempo.BackColor = System.Drawing.Color.Black;
+            this.lblTiempo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTiempo.Location = new System.Drawing.Point(462, 605);
             this.lblTiempo.Name = "lblTiempo";
             this.lblTiempo.Size = new System.Drawing.Size(35, 13);
             this.lblTiempo.TabIndex = 9;
             this.lblTiempo.Text = "label1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
+            this.pictureBox1.Location = new System.Drawing.Point(-96, -60);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1148, 778);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(830, 499);
+            this.ClientSize = new System.Drawing.Size(957, 659);
             this.Controls.Add(this.lblTiempo);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.tssUsuario);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.ms1);
+            this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MainMenuStrip = this.menuStrip1;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.ms1;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
@@ -169,8 +191,9 @@
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.tssUsuario.ResumeLayout(false);
             this.tssUsuario.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.ms1.ResumeLayout(false);
+            this.ms1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,7 +204,7 @@
         private System.Windows.Forms.StatusStrip tssUsuario;
         private System.Windows.Forms.ToolStripStatusLabel tsslblUsuario;
         private System.Windows.Forms.ToolStripStatusLabel tssUno;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip ms1;
         private System.Windows.Forms.ToolStripMenuItem tAREASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aDMINISTRACIONToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uSUARIOSToolStripMenuItem;
@@ -191,5 +214,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem eLIMINARUSUARIOToolStripMenuItem;
         private System.Windows.Forms.Label lblTiempo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

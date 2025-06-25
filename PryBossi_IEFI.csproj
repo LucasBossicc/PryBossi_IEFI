@@ -91,6 +91,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrueba.Designer.cs">
+      <DependentUpon>frmPrueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTareas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrueba.resx">
+      <DependentUpon>frmPrueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTareas.resx">
       <DependentUpon>FrmTareas.cs</DependentUpon>
@@ -151,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\44562.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagn.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

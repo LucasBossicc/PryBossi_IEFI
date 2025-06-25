@@ -27,7 +27,7 @@ namespace PryBossi_IEFI
     
         private Timer timerUso;
         private Stopwatch cronometro = new Stopwatch();
-                private int registroId;
+               
 
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -72,15 +72,15 @@ namespace PryBossi_IEFI
 
         private void aUDITORIAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAuditoria a = new frmAuditoria();
-            a.ShowDialog();
+            frmAuditoria irAuditoria = new frmAuditoria();
+            irAuditoria.ShowDialog();
         }
       
 
         private void eLIMINARUSUARIOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEliminar aa = new frmEliminar();
-            aa.ShowDialog();
+            frmEliminar eliminar = new frmEliminar();
+            eliminar.ShowDialog();
         }
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -107,6 +107,16 @@ namespace PryBossi_IEFI
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        private void tsslblUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

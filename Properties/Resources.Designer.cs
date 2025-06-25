@@ -83,6 +83,16 @@ namespace PryBossi_IEFI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagn {
+            get {
+                object obj = ResourceManager.GetObject("imagn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_clipart_computer_icons_button_login_image_file_formats_logo {
             get {
                 object obj = ResourceManager.GetObject("png-clipart-computer-icons-button-login-image-file-formats-logo", resourceCulture);
