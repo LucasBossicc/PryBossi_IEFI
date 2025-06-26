@@ -71,8 +71,8 @@ namespace PryBossi_IEFI
             if (ValidarLogin(usuario, contraseña))
             {
                 MessageBox.Show("Inicio de sesión exitoso.");
-                FrmPrincipal a = new FrmPrincipal(txtUsuario.Text);
-                a.Show();
+                FrmPrincipal irPrinciapal = new FrmPrincipal(txtUsuario.Text);
+                irPrinciapal.Show();
                 this.Hide();
 
             }
@@ -84,16 +84,21 @@ namespace PryBossi_IEFI
 
         private void lblCuentaNueva_Click(object sender, EventArgs e)
         {
-            FrmCrearCuenta a = new FrmCrearCuenta();    
-            a.Show();
+            FrmCrearCuenta irCuentaNueva = new FrmCrearCuenta();    
+            irCuentaNueva.Show();
             this.Hide();
         }
 
         private void lblOlvido_Click(object sender, EventArgs e)
         {
-            frmModificarContraseña a = new frmModificarContraseña();
-            a.Show();
+            frmModificarContraseña irModificar = new frmModificarContraseña();
+            irModificar.Show();
             this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

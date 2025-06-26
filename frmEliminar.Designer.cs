@@ -33,12 +33,12 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbFondo = new System.Windows.Forms.PictureBox();
             this.gbEliminar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFondo)).BeginInit();
             this.SuspendLayout();
             // 
             // gbEliminar
@@ -47,8 +47,8 @@
             this.gbEliminar.Controls.Add(this.btnVolver);
             this.gbEliminar.Controls.Add(this.btnEliminar);
             this.gbEliminar.Controls.Add(this.txtContraseña);
-            this.gbEliminar.Controls.Add(this.label1);
-            this.gbEliminar.Controls.Add(this.label2);
+            this.gbEliminar.Controls.Add(this.lblUsuario);
+            this.gbEliminar.Controls.Add(this.lblContraseña);
             this.gbEliminar.Controls.Add(this.txtUsuario);
             this.gbEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbEliminar.ForeColor = System.Drawing.Color.Black;
@@ -85,26 +85,26 @@
             this.txtContraseña.Size = new System.Drawing.Size(265, 29);
             this.txtContraseña.TabIndex = 3;
             // 
-            // label1
+            // lblUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario:";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(34, 35);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(77, 22);
+            this.lblUsuario.TabIndex = 0;
+            this.lblUsuario.Text = "Usuario:";
             // 
-            // label2
+            // lblContraseña
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(6, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Contraseña:";
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.BackColor = System.Drawing.Color.Black;
+            this.lblContraseña.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblContraseña.Location = new System.Drawing.Point(6, 74);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(106, 22);
+            this.lblContraseña.TabIndex = 1;
+            this.lblContraseña.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
@@ -113,15 +113,16 @@
             this.txtUsuario.Size = new System.Drawing.Size(265, 29);
             this.txtUsuario.TabIndex = 2;
             // 
-            // pictureBox1
+            // pbFondo
             // 
-            this.pictureBox1.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
-            this.pictureBox1.Location = new System.Drawing.Point(-96, -60);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1148, 778);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pbFondo.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
+            this.pbFondo.Location = new System.Drawing.Point(-96, -60);
+            this.pbFondo.Name = "pbFondo";
+            this.pbFondo.Size = new System.Drawing.Size(1148, 778);
+            this.pbFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFondo.TabIndex = 4;
+            this.pbFondo.TabStop = false;
+            this.pbFondo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmEliminar
             // 
@@ -130,14 +131,14 @@
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(957, 659);
             this.Controls.Add(this.gbEliminar);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEliminar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar";
             this.gbEliminar.ResumeLayout(false);
             this.gbEliminar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFondo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,10 +148,10 @@
         private System.Windows.Forms.GroupBox gbEliminar;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbFondo;
     }
 }

@@ -42,10 +42,10 @@
             this.eLIMINARUSUARIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblTiempo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbFondo = new System.Windows.Forms.PictureBox();
             this.tssUsuario.SuspendLayout();
             this.ms1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFondo)).BeginInit();
             this.SuspendLayout();
             // 
             // tssUsuario
@@ -159,15 +159,16 @@
             this.lblTiempo.TabIndex = 9;
             this.lblTiempo.Text = "label1";
             // 
-            // pictureBox1
+            // pbFondo
             // 
-            this.pictureBox1.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
-            this.pictureBox1.Location = new System.Drawing.Point(-96, -60);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1148, 778);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.pbFondo.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
+            this.pbFondo.Location = new System.Drawing.Point(-96, -60);
+            this.pbFondo.Name = "pbFondo";
+            this.pbFondo.Size = new System.Drawing.Size(1148, 778);
+            this.pbFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFondo.TabIndex = 10;
+            this.pbFondo.TabStop = false;
+            this.pbFondo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmPrincipal
             // 
@@ -179,7 +180,7 @@
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.tssUsuario);
             this.Controls.Add(this.ms1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbFondo);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.ms1;
@@ -193,7 +194,7 @@
             this.tssUsuario.PerformLayout();
             this.ms1.ResumeLayout(false);
             this.ms1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFondo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,6 +215,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem eLIMINARUSUARIOToolStripMenuItem;
         private System.Windows.Forms.Label lblTiempo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbFondo;
     }
 }

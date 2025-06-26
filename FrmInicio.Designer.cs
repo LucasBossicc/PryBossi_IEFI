@@ -34,16 +34,16 @@
             this.gbInicio = new System.Windows.Forms.GroupBox();
             this.lblOlvido = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblCuentaNueva = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbFondo = new System.Windows.Forms.PictureBox();
             this.gbInicio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFondo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -108,6 +108,17 @@
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbLogo.Image = global::PryBossi_IEFI.Properties.Resources._44562;
+            this.pbLogo.Location = new System.Drawing.Point(204, 19);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(82, 95);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 1;
+            this.pbLogo.TabStop = false;
+            // 
             // lblCuentaNueva
             // 
             this.lblCuentaNueva.AutoSize = true;
@@ -155,26 +166,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // pbLogo
+            // pbFondo
             // 
-            this.pbLogo.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pbLogo.Image = global::PryBossi_IEFI.Properties.Resources._44562;
-            this.pbLogo.Location = new System.Drawing.Point(204, 19);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(82, 95);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogo.TabIndex = 1;
-            this.pbLogo.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
-            this.pictureBox2.Location = new System.Drawing.Point(-96, -60);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1148, 778);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.pbFondo.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
+            this.pbFondo.Location = new System.Drawing.Point(-96, -60);
+            this.pbFondo.Name = "pbFondo";
+            this.pbFondo.Size = new System.Drawing.Size(1148, 778);
+            this.pbFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFondo.TabIndex = 4;
+            this.pbFondo.TabStop = false;
+            this.pbFondo.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // FrmInicio
             // 
@@ -184,7 +185,7 @@
             this.ClientSize = new System.Drawing.Size(957, 659);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbInicio);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pbFondo);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmInicio";
@@ -193,9 +194,9 @@
             this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.gbInicio.ResumeLayout(false);
             this.gbInicio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFondo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,7 +212,7 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Label lblOlvido;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbFondo;
     }
 }
 

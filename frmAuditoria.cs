@@ -33,19 +33,24 @@ namespace PryBossi_IEFI
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Inicio.mdb"))
+            using (OleDbConnection conexion = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Inicio.mdb"))
             {
-                conn.Open();
-                OleDbDataAdapter da = new OleDbDataAdapter("SELECT Nombre, FechaInicio, Duracion FROM Registros ORDER BY FechaInicio DESC", conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dgvAuditoria.DataSource = dt;
+                conexion.Open();
+                OleDbDataAdapter adaptador = new OleDbDataAdapter("SELECT Nombre, FechaInicio, Duracion FROM Registros ORDER BY FechaInicio DESC", conexion);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                dgvAuditoria.DataSource = tabla;
             }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
             
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

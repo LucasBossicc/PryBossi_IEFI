@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarContraseña));
             this.gbInicio = new System.Windows.Forms.GroupBox();
             this.btnCrearUsuario = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.lblRepetir = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtContraseñaRepe = new System.Windows.Forms.TextBox();
             this.txtContraseñaNueva = new System.Windows.Forms.TextBox();
             this.txtUsuarioNuevo = new System.Windows.Forms.TextBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbFondo = new System.Windows.Forms.PictureBox();
             this.gbInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFondo)).BeginInit();
             this.SuspendLayout();
             // 
             // gbInicio
@@ -49,7 +49,7 @@
             this.gbInicio.BackColor = System.Drawing.SystemColors.MenuText;
             this.gbInicio.Controls.Add(this.btnCrearUsuario);
             this.gbInicio.Controls.Add(this.pbLogo);
-            this.gbInicio.Controls.Add(this.label1);
+            this.gbInicio.Controls.Add(this.lblRepetir);
             this.gbInicio.Controls.Add(this.lblContraseña);
             this.gbInicio.Controls.Add(this.lblUsuario);
             this.gbInicio.Controls.Add(this.txtContraseñaRepe);
@@ -73,17 +73,28 @@
             this.btnCrearUsuario.UseVisualStyleBackColor = false;
             this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUsuario_Click);
             // 
-            // label1
+            // pbLogo
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(147, 301);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "REPITA SU CONTRASEÑA\r\n";
+            this.pbLogo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbLogo.Image = global::PryBossi_IEFI.Properties.Resources._44562;
+            this.pbLogo.Location = new System.Drawing.Point(204, 19);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(82, 95);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 1;
+            this.pbLogo.TabStop = false;
+            // 
+            // lblRepetir
+            // 
+            this.lblRepetir.AutoSize = true;
+            this.lblRepetir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblRepetir.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRepetir.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRepetir.Location = new System.Drawing.Point(147, 301);
+            this.lblRepetir.Name = "lblRepetir";
+            this.lblRepetir.Size = new System.Drawing.Size(203, 29);
+            this.lblRepetir.TabIndex = 1;
+            this.lblRepetir.Text = "REPITA SU CONTRASEÑA\r\n";
             // 
             // lblContraseña
             // 
@@ -139,26 +150,16 @@
             this.txtUsuarioNuevo.Size = new System.Drawing.Size(303, 38);
             this.txtUsuarioNuevo.TabIndex = 0;
             // 
-            // pbLogo
+            // pbFondo
             // 
-            this.pbLogo.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pbLogo.Image = global::PryBossi_IEFI.Properties.Resources._44562;
-            this.pbLogo.Location = new System.Drawing.Point(204, 19);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(82, 95);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogo.TabIndex = 1;
-            this.pbLogo.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
-            this.pictureBox1.Location = new System.Drawing.Point(-96, -60);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1148, 778);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pbFondo.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
+            this.pbFondo.Location = new System.Drawing.Point(-29, -16);
+            this.pbFondo.Name = "pbFondo";
+            this.pbFondo.Size = new System.Drawing.Size(1148, 778);
+            this.pbFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFondo.TabIndex = 4;
+            this.pbFondo.TabStop = false;
+            this.pbFondo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmModificarContraseña
             // 
@@ -167,7 +168,7 @@
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(957, 659);
             this.Controls.Add(this.gbInicio);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModificarContraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -175,7 +176,7 @@
             this.gbInicio.ResumeLayout(false);
             this.gbInicio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFondo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,8 +190,8 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtContraseñaNueva;
         private System.Windows.Forms.TextBox txtUsuarioNuevo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRepetir;
         private System.Windows.Forms.TextBox txtContraseñaRepe;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbFondo;
     }
 }

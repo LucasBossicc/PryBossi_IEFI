@@ -19,8 +19,8 @@ namespace PryBossi_IEFI
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            FrmPrincipal a = new FrmPrincipal(txtUsuario.Text);
-            a.Show();
+            FrmPrincipal volver = new FrmPrincipal(txtUsuario.Text);
+            volver.Show();
             this.Hide();
         }
 
@@ -47,6 +47,11 @@ namespace PryBossi_IEFI
             txtUsuario.Text = "";
             txtContraseña.Text = "";
             
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

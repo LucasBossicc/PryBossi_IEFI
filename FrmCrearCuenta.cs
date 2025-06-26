@@ -45,5 +45,10 @@ namespace PryBossi_IEFI
                 MessageBox.Show("No se pudo crear la cuenta.");
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
