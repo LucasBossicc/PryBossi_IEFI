@@ -153,13 +153,12 @@
             // pbFondo
             // 
             this.pbFondo.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
-            this.pbFondo.Location = new System.Drawing.Point(-29, -16);
+            this.pbFondo.Location = new System.Drawing.Point(-96, -60);
             this.pbFondo.Name = "pbFondo";
             this.pbFondo.Size = new System.Drawing.Size(1148, 778);
             this.pbFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFondo.TabIndex = 4;
+            this.pbFondo.TabIndex = 5;
             this.pbFondo.TabStop = false;
-            this.pbFondo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmModificarContraseña
             // 

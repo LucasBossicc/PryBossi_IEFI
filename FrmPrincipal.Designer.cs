@@ -93,6 +93,7 @@
             this.tAREASToolStripMenuItem.Name = "tAREASToolStripMenuItem";
             this.tAREASToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.tAREASToolStripMenuItem.Text = "TAREAS";
+            this.tAREASToolStripMenuItem.Click += new System.EventHandler(this.tAREASToolStripMenuItem_Click);
             // 
             // aDMINISTRACIONToolStripMenuItem
             // 

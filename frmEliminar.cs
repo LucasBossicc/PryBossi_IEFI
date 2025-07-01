@@ -19,9 +19,7 @@ namespace PryBossi_IEFI
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            FrmPrincipal volver = new FrmPrincipal(txtUsuario.Text);
-            volver.Show();
-            this.Hide();
+           
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

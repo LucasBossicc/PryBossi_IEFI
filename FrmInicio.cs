@@ -66,12 +66,14 @@ namespace PryBossi_IEFI
         {
             string usuario = txtUsuario.Text.Trim();
             string contraseña = txtContraseña.Text;
+            string tipoUsuario = ObtenerTipoUsuario(usuario);
             clsRegistro.UsuarioActual = usuario;
             clsRegistro.HoraInicio = DateTime.Now;
+
             if (ValidarLogin(usuario, contraseña))
             {
                 MessageBox.Show("Inicio de sesión exitoso.");
-                FrmPrincipal irPrinciapal = new FrmPrincipal(txtUsuario.Text);
+                FrmPrincipal irPrinciapal = new FrmPrincipal(txtUsuario.Text, tipoUsuario);
                 irPrinciapal.Show();
                 this.Hide();
 
@@ -79,6 +81,19 @@ namespace PryBossi_IEFI
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrectos.");
+            }
+        }
+        private string ObtenerTipoUsuario(string usuario)
+        {
+            using (OleDbConnection conexion = clsBaseDatos.Conexion())
+            {
+                string consulta = "SELECT Categoria FROM NewCuenta WHERE nombre = ?";
+                using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
+                {
+                    comando.Parameters.AddWithValue("?", usuario);
+                    object resultado = comando.ExecuteScalar();
+                    return resultado?.ToString() ?? "Operador"; // valor por defecto si no se encuentra
+                }
             }
         }
 
@@ -99,6 +114,14 @@ namespace PryBossi_IEFI
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnIngresar.PerformClick(); // Simula el clic en el botón
+            }
         }
     }
 }

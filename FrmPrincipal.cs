@@ -16,10 +16,10 @@ namespace PryBossi_IEFI
 {
     public partial class FrmPrincipal : Form
     {
-        public FrmPrincipal(string nombreUsuario)
+        public FrmPrincipal(string nombreUsuario, string tipoUsuario)
         {
             InitializeComponent();
-            
+            this.tipoUsuario = tipoUsuario;
             tssUno.Text = "Bienvenido, " + nombreUsuario;
 
         }
@@ -27,8 +27,8 @@ namespace PryBossi_IEFI
     
         private Timer timerUso;
         private Stopwatch cronometro = new Stopwatch();
-               
 
+        private string tipoUsuario;
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
@@ -46,9 +46,13 @@ namespace PryBossi_IEFI
             timerUso.Tick += TimerUso_Tick;
             timerUso.Start();
             ;
+            
+            if (tipoUsuario != "Administrador")
+            {
+                eLIMINARUSUARIOToolStripMenuItem.Visible = false;
+            }
 
-
-    }
+        }
         private void Form2_Load(object sender, EventArgs e)
         {
            
@@ -122,6 +126,12 @@ namespace PryBossi_IEFI
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tAREASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTareas irTareas = new FrmTareas();
+            irTareas.ShowDialog();
         }
     }
 }

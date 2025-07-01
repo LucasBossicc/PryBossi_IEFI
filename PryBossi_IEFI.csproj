@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -55,6 +58,7 @@
     <Compile Include="clsBaseDatos.cs" />
     <Compile Include="clsCuenta.cs" />
     <Compile Include="clsRegistro.cs" />
+    <Compile Include="clsTarea.cs" />
     <Compile Include="frmAuditoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,12 +95,6 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPrueba.Designer.cs">
-      <DependentUpon>frmPrueba.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmTareas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,9 +120,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPrueba.resx">
-      <DependentUpon>frmPrueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTareas.resx">
       <DependentUpon>FrmTareas.cs</DependentUpon>
@@ -163,6 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imagn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
