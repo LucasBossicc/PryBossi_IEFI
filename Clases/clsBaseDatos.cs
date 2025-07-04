@@ -11,7 +11,7 @@ namespace PryBossi_IEFI
 {
     internal class clsBaseDatos
     {
-        public static string CadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Inicio.mdb";
+        public static string CadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\..\..\BaseDatos\Inicio.mdb";
 
         public static OleDbConnection Conexion()
         {

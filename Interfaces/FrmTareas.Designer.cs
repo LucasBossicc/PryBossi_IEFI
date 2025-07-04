@@ -35,22 +35,22 @@
             this.cmbTarea = new System.Windows.Forms.ComboBox();
             this.cmbLugar = new System.Windows.Forms.ComboBox();
             this.gbTarea = new System.Windows.Forms.GroupBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvTarea = new System.Windows.Forms.DataGridView();
             this.gbDetalle = new System.Windows.Forms.GroupBox();
-            this.btnGrabar = new System.Windows.Forms.Button();
-            this.lblComentario = new System.Windows.Forms.Label();
-            this.rtbComentario = new System.Windows.Forms.RichTextBox();
-            this.chInsumo = new System.Windows.Forms.CheckBox();
-            this.chEstudio = new System.Windows.Forms.CheckBox();
-            this.chVacaciones = new System.Windows.Forms.CheckBox();
-            this.chSalario = new System.Windows.Forms.CheckBox();
             this.chRecibo = new System.Windows.Forms.CheckBox();
-            this.lblUniforme = new System.Windows.Forms.Label();
-            this.lblLicencia = new System.Windows.Forms.Label();
+            this.chSalario = new System.Windows.Forms.CheckBox();
+            this.chVacaciones = new System.Windows.Forms.CheckBox();
+            this.chEstudio = new System.Windows.Forms.CheckBox();
+            this.chInsumo = new System.Windows.Forms.CheckBox();
+            this.rtbComentario = new System.Windows.Forms.RichTextBox();
+            this.btnGrabar = new System.Windows.Forms.Button();
             this.lblReclamo = new System.Windows.Forms.Label();
+            this.lblLicencia = new System.Windows.Forms.Label();
+            this.lblUniforme = new System.Windows.Forms.Label();
+            this.lblComentario = new System.Windows.Forms.Label();
             this.pbFondo = new System.Windows.Forms.PictureBox();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.gbTarea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarea)).BeginInit();
             this.gbDetalle.SuspendLayout();
@@ -97,6 +97,7 @@
             // 
             // cmbTarea
             // 
+            this.cmbTarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTarea.FormattingEnabled = true;
             this.cmbTarea.Location = new System.Drawing.Point(190, 118);
             this.cmbTarea.Name = "cmbTarea";
@@ -105,6 +106,7 @@
             // 
             // cmbLugar
             // 
+            this.cmbLugar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLugar.FormattingEnabled = true;
             this.cmbLugar.Location = new System.Drawing.Point(190, 150);
             this.cmbLugar.Name = "cmbLugar";
@@ -123,6 +125,14 @@
             this.gbTarea.TabStop = false;
             this.gbTarea.Enter += new System.EventHandler(this.gbTarea_Enter);
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(161, 49);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(121, 20);
+            this.dtpFecha.TabIndex = 1;
+            // 
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(161, 152);
@@ -135,9 +145,12 @@
             // 
             // dgvTarea
             // 
+            this.dgvTarea.AllowUserToAddRows = false;
+            this.dgvTarea.AllowUserToDeleteRows = false;
             this.dgvTarea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTarea.Location = new System.Drawing.Point(413, 40);
             this.dgvTarea.Name = "dgvTarea";
+            this.dgvTarea.ReadOnly = true;
             this.dgvTarea.Size = new System.Drawing.Size(532, 294);
             this.dgvTarea.TabIndex = 10;
             // 
@@ -162,66 +175,15 @@
             this.gbDetalle.TabStop = false;
             this.gbDetalle.Text = "DETALLE";
             // 
-            // btnGrabar
+            // chRecibo
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(545, 213);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(121, 39);
-            this.btnGrabar.TabIndex = 0;
-            this.btnGrabar.Text = "GRABAR";
-            this.btnGrabar.UseVisualStyleBackColor = true;
-            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
-            // 
-            // lblComentario
-            // 
-            this.lblComentario.AutoSize = true;
-            this.lblComentario.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblComentario.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComentario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblComentario.Location = new System.Drawing.Point(538, 16);
-            this.lblComentario.Name = "lblComentario";
-            this.lblComentario.Size = new System.Drawing.Size(128, 29);
-            this.lblComentario.TabIndex = 7;
-            this.lblComentario.Text = "COMENTARIOS";
-            this.lblComentario.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // rtbComentario
-            // 
-            this.rtbComentario.Location = new System.Drawing.Point(384, 48);
-            this.rtbComentario.Name = "rtbComentario";
-            this.rtbComentario.Size = new System.Drawing.Size(443, 159);
-            this.rtbComentario.TabIndex = 8;
-            this.rtbComentario.Text = "";
-            // 
-            // chInsumo
-            // 
-            this.chInsumo.AutoSize = true;
-            this.chInsumo.Location = new System.Drawing.Point(39, 48);
-            this.chInsumo.Name = "chInsumo";
-            this.chInsumo.Size = new System.Drawing.Size(69, 17);
-            this.chInsumo.TabIndex = 9;
-            this.chInsumo.Text = "INSUMO";
-            this.chInsumo.UseVisualStyleBackColor = true;
-            // 
-            // chEstudio
-            // 
-            this.chEstudio.AutoSize = true;
-            this.chEstudio.Location = new System.Drawing.Point(39, 94);
-            this.chEstudio.Name = "chEstudio";
-            this.chEstudio.Size = new System.Drawing.Size(74, 17);
-            this.chEstudio.TabIndex = 9;
-            this.chEstudio.Text = "ESTUDIO";
-            this.chEstudio.UseVisualStyleBackColor = true;
-            // 
-            // chVacaciones
-            // 
-            this.chVacaciones.AutoSize = true;
-            this.chVacaciones.Location = new System.Drawing.Point(39, 117);
-            this.chVacaciones.Name = "chVacaciones";
-            this.chVacaciones.Size = new System.Drawing.Size(94, 17);
-            this.chVacaciones.TabIndex = 9;
-            this.chVacaciones.Text = "VACACIONES";
-            this.chVacaciones.UseVisualStyleBackColor = true;
+            this.chRecibo.AutoSize = true;
+            this.chRecibo.Location = new System.Drawing.Point(39, 190);
+            this.chRecibo.Name = "chRecibo";
+            this.chRecibo.Size = new System.Drawing.Size(66, 17);
+            this.chRecibo.TabIndex = 9;
+            this.chRecibo.Text = "RECIBO";
+            this.chRecibo.UseVisualStyleBackColor = true;
             // 
             // chSalario
             // 
@@ -233,41 +195,53 @@
             this.chSalario.Text = "SALARIO";
             this.chSalario.UseVisualStyleBackColor = true;
             // 
-            // chRecibo
+            // chVacaciones
             // 
-            this.chRecibo.AutoSize = true;
-            this.chRecibo.Location = new System.Drawing.Point(39, 190);
-            this.chRecibo.Name = "chRecibo";
-            this.chRecibo.Size = new System.Drawing.Size(66, 17);
-            this.chRecibo.TabIndex = 9;
-            this.chRecibo.Text = "RECIBO";
-            this.chRecibo.UseVisualStyleBackColor = true;
+            this.chVacaciones.AutoSize = true;
+            this.chVacaciones.Location = new System.Drawing.Point(39, 117);
+            this.chVacaciones.Name = "chVacaciones";
+            this.chVacaciones.Size = new System.Drawing.Size(94, 17);
+            this.chVacaciones.TabIndex = 9;
+            this.chVacaciones.Text = "VACACIONES";
+            this.chVacaciones.UseVisualStyleBackColor = true;
             // 
-            // lblUniforme
+            // chEstudio
             // 
-            this.lblUniforme.AutoSize = true;
-            this.lblUniforme.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblUniforme.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUniforme.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUniforme.Location = new System.Drawing.Point(6, 21);
-            this.lblUniforme.Name = "lblUniforme";
-            this.lblUniforme.Size = new System.Drawing.Size(77, 24);
-            this.lblUniforme.TabIndex = 7;
-            this.lblUniforme.Text = "UNIFORME";
-            this.lblUniforme.Click += new System.EventHandler(this.label1_Click);
+            this.chEstudio.AutoSize = true;
+            this.chEstudio.Location = new System.Drawing.Point(39, 94);
+            this.chEstudio.Name = "chEstudio";
+            this.chEstudio.Size = new System.Drawing.Size(74, 17);
+            this.chEstudio.TabIndex = 9;
+            this.chEstudio.Text = "ESTUDIO";
+            this.chEstudio.UseVisualStyleBackColor = true;
             // 
-            // lblLicencia
+            // chInsumo
             // 
-            this.lblLicencia.AutoSize = true;
-            this.lblLicencia.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblLicencia.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLicencia.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblLicencia.Location = new System.Drawing.Point(6, 68);
-            this.lblLicencia.Name = "lblLicencia";
-            this.lblLicencia.Size = new System.Drawing.Size(67, 24);
-            this.lblLicencia.TabIndex = 7;
-            this.lblLicencia.Text = "LICENCIA";
-            this.lblLicencia.Click += new System.EventHandler(this.label1_Click);
+            this.chInsumo.AutoSize = true;
+            this.chInsumo.Location = new System.Drawing.Point(39, 48);
+            this.chInsumo.Name = "chInsumo";
+            this.chInsumo.Size = new System.Drawing.Size(69, 17);
+            this.chInsumo.TabIndex = 9;
+            this.chInsumo.Text = "INSUMO";
+            this.chInsumo.UseVisualStyleBackColor = true;
+            // 
+            // rtbComentario
+            // 
+            this.rtbComentario.Location = new System.Drawing.Point(384, 48);
+            this.rtbComentario.Name = "rtbComentario";
+            this.rtbComentario.Size = new System.Drawing.Size(443, 159);
+            this.rtbComentario.TabIndex = 8;
+            this.rtbComentario.Text = "";
+            // 
+            // btnGrabar
+            // 
+            this.btnGrabar.Location = new System.Drawing.Point(545, 213);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(121, 39);
+            this.btnGrabar.TabIndex = 0;
+            this.btnGrabar.Text = "GRABAR";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // lblReclamo
             // 
@@ -282,6 +256,45 @@
             this.lblReclamo.Text = "RECLAMO";
             this.lblReclamo.Click += new System.EventHandler(this.label1_Click);
             // 
+            // lblLicencia
+            // 
+            this.lblLicencia.AutoSize = true;
+            this.lblLicencia.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblLicencia.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLicencia.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblLicencia.Location = new System.Drawing.Point(6, 68);
+            this.lblLicencia.Name = "lblLicencia";
+            this.lblLicencia.Size = new System.Drawing.Size(67, 24);
+            this.lblLicencia.TabIndex = 7;
+            this.lblLicencia.Text = "LICENCIA";
+            this.lblLicencia.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblUniforme
+            // 
+            this.lblUniforme.AutoSize = true;
+            this.lblUniforme.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblUniforme.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUniforme.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUniforme.Location = new System.Drawing.Point(6, 21);
+            this.lblUniforme.Name = "lblUniforme";
+            this.lblUniforme.Size = new System.Drawing.Size(77, 24);
+            this.lblUniforme.TabIndex = 7;
+            this.lblUniforme.Text = "UNIFORME";
+            this.lblUniforme.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblComentario
+            // 
+            this.lblComentario.AutoSize = true;
+            this.lblComentario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblComentario.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComentario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblComentario.Location = new System.Drawing.Point(538, 16);
+            this.lblComentario.Name = "lblComentario";
+            this.lblComentario.Size = new System.Drawing.Size(128, 29);
+            this.lblComentario.TabIndex = 7;
+            this.lblComentario.Text = "COMENTARIOS";
+            this.lblComentario.Click += new System.EventHandler(this.label1_Click);
+            // 
             // pbFondo
             // 
             this.pbFondo.Image = global::PryBossi_IEFI.Properties.Resources.imagn;
@@ -292,14 +305,6 @@
             this.pbFondo.TabIndex = 12;
             this.pbFondo.TabStop = false;
             this.pbFondo.Click += new System.EventHandler(this.pbFondo_Click);
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(161, 49);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(121, 20);
-            this.dtpFecha.TabIndex = 1;
             // 
             // FrmTareas
             // 

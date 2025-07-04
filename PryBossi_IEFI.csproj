@@ -55,73 +55,73 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsBaseDatos.cs" />
-    <Compile Include="clsCuenta.cs" />
-    <Compile Include="clsRegistro.cs" />
-    <Compile Include="clsTarea.cs" />
-    <Compile Include="frmAuditoria.cs">
+    <Compile Include="Clases\clsBaseDatos.cs" />
+    <Compile Include="Clases\clsCuenta.cs" />
+    <Compile Include="Clases\clsRegistro.cs" />
+    <Compile Include="Clases\clsTarea.cs" />
+    <Compile Include="Interfaces\frmAuditoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAuditoria.Designer.cs">
+    <Compile Include="Interfaces\frmAuditoria.Designer.cs">
       <DependentUpon>frmAuditoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCrearCuenta.cs">
+    <Compile Include="Interfaces\FrmCrearCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCrearCuenta.Designer.cs">
+    <Compile Include="Interfaces\FrmCrearCuenta.Designer.cs">
       <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEliminar.cs">
+    <Compile Include="Interfaces\frmEliminar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEliminar.Designer.cs">
+    <Compile Include="Interfaces\frmEliminar.Designer.cs">
       <DependentUpon>frmEliminar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInicio.cs">
+    <Compile Include="Interfaces\FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInicio.Designer.cs">
+    <Compile Include="Interfaces\FrmInicio.Designer.cs">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmModificarContraseña.cs">
+    <Compile Include="Interfaces\frmModificarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmModificarContraseña.Designer.cs">
+    <Compile Include="Interfaces\frmModificarContraseña.Designer.cs">
       <DependentUpon>frmModificarContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPrincipal.cs">
+    <Compile Include="Interfaces\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPrincipal.Designer.cs">
+    <Compile Include="Interfaces\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTareas.cs">
+    <Compile Include="Interfaces\FrmTareas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTareas.Designer.cs">
+    <Compile Include="Interfaces\FrmTareas.Designer.cs">
       <DependentUpon>FrmTareas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAuditoria.resx">
+    <EmbeddedResource Include="Interfaces\frmAuditoria.resx">
       <DependentUpon>frmAuditoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCrearCuenta.resx">
+    <EmbeddedResource Include="Interfaces\FrmCrearCuenta.resx">
       <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEliminar.resx">
+    <EmbeddedResource Include="Interfaces\frmEliminar.resx">
       <DependentUpon>frmEliminar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInicio.resx">
+    <EmbeddedResource Include="Interfaces\FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmModificarContraseña.resx">
+    <EmbeddedResource Include="Interfaces\frmModificarContraseña.resx">
       <DependentUpon>frmModificarContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrincipal.resx">
+    <EmbeddedResource Include="Interfaces\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTareas.resx">
+    <EmbeddedResource Include="Interfaces\FrmTareas.resx">
       <DependentUpon>FrmTareas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -145,7 +145,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Clases\App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Captura de pantalla 2025-05-29 164404.png" />

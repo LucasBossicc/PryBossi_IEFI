@@ -99,7 +99,7 @@ namespace PryBossi_IEFI
             string tiempoUsoString = $"{tiempoUso.Hours:D2}:{tiempoUso.Minutes:D2}:{tiempoUso.Seconds:D2}";
             // Ejemplo de resultado: "01:23:45"
 
-            using (OleDbConnection conexionn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Inicio.mdb"))
+            using (OleDbConnection conexionn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\..\..\BaseDatos\Inicio.mdb"))
             {
                 conexionn.Open();
                 string query = "INSERT INTO Registros (Nombre, FechaInicio, Duracion) VALUES (?, ?, ?)";

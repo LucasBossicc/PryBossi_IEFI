@@ -33,7 +33,7 @@ namespace PryBossi_IEFI
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            using (OleDbConnection conexion = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Inicio.mdb"))
+            using (OleDbConnection conexion = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\..\..\BaseDatos\Inicio.mdb"))
             {
                 conexion.Open();
                 OleDbDataAdapter adaptador = new OleDbDataAdapter("SELECT Nombre, FechaInicio, Duracion FROM Registros ORDER BY FechaInicio DESC", conexion);

@@ -77,17 +77,22 @@ namespace PryBossi_IEFI
             {
                 using (OleDbConnection conexion = clsBaseDatos.Conexion())
                 {
-                    string sql = @"
-                SELECT RegistroTarea.Fecha, Tarea.Nombre AS Tarea, Lugar.Nombre AS Lugar
+                    string consulta = @"
+                SELECT RegistroTarea.Fecha, Tarea.Nombre AS Tarea, Lugar.Nombre AS Lugar, RegistroTarea.Insumo,
+                    RegistroTarea.Estudio,
+                    RegistroTarea.Vacaciones,
+                    RegistroTarea.Salario,
+                    RegistroTarea.Recibo,
+                    RegistroTarea.Comentario
                 FROM (RegistroTarea
                 INNER JOIN Tarea ON RegistroTarea.IdTarea = Tarea.IdTarea)
                 INNER JOIN Lugar ON RegistroTarea.IdLugar = Lugar.IdLugar
             ";
 
-                    OleDbDataAdapter da = new OleDbDataAdapter(sql, conexion);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    return dt;
+                    OleDbDataAdapter adaptador = new OleDbDataAdapter(consulta, conexion);
+                    DataTable tabla = new DataTable();
+                    adaptador.Fill(tabla);
+                    return tabla;
                 }
             }
             catch (Exception ex)
@@ -103,13 +108,13 @@ namespace PryBossi_IEFI
             {
                 using (OleDbConnection conexion = clsBaseDatos.Conexion())
                 {
-                    string sql = "SELECT IdTarea, Nombre FROM Tarea";
+                    string consulta = "SELECT IdTarea, Nombre FROM Tarea";
 
-                    OleDbDataAdapter adaptador = new OleDbDataAdapter(sql, conexion);
-                    DataTable dt = new DataTable();
-                    adaptador.Fill(dt);
+                    OleDbDataAdapter adaptador = new OleDbDataAdapter(consulta, conexion);
+                    DataTable tabla = new DataTable();
+                    adaptador.Fill(tabla);
 
-                    combo.DataSource = dt;
+                    combo.DataSource = tabla;
                     combo.DisplayMember = "Nombre";
                     combo.ValueMember = "IdTarea";
                 }
@@ -127,13 +132,13 @@ namespace PryBossi_IEFI
             {
                 using (OleDbConnection conexion = clsBaseDatos.Conexion())
                 {
-                    string sql = "SELECT IdLugar, Nombre FROM Lugar";
+                    string Consulta = "SELECT IdLugar, Nombre FROM Lugar";
 
-                    OleDbDataAdapter adaptador = new OleDbDataAdapter(sql, conexion);
-                    DataTable dt = new DataTable();
-                    adaptador.Fill(dt);
+                    OleDbDataAdapter adaptador = new OleDbDataAdapter(Consulta, conexion);
+                    DataTable tabla = new DataTable();
+                    adaptador.Fill(tabla);
 
-                    combo.DataSource = dt;
+                    combo.DataSource = tabla;
                     combo.DisplayMember = "Nombre";
                     combo.ValueMember = "IdLugar";
                 }

@@ -38,10 +38,13 @@
             // 
             // dgvAuditoria
             // 
+            this.dgvAuditoria.AllowUserToAddRows = false;
+            this.dgvAuditoria.AllowUserToDeleteRows = false;
             this.dgvAuditoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAuditoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAuditoria.Location = new System.Drawing.Point(161, 128);
             this.dgvAuditoria.Name = "dgvAuditoria";
+            this.dgvAuditoria.ReadOnly = true;
             this.dgvAuditoria.Size = new System.Drawing.Size(673, 277);
             this.dgvAuditoria.TabIndex = 0;
             this.dgvAuditoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAuditoria_CellContentClick);

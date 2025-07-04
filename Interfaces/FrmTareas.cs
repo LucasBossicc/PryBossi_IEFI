@@ -97,6 +97,7 @@ namespace PryBossi_IEFI
             {
                 MessageBox.Show("Error al grabar el detalle:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            dgvTarea.DataSource = tarea.ObtenerListadoTareas();
         }
     }
 }
